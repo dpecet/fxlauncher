@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group 'no.tornado'
+version '1.0.22-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
