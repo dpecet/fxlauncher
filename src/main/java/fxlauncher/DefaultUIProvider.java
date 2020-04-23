@@ -19,15 +19,15 @@ public class DefaultUIProvider implements UIProvider {
 		return root;
 	}
 
-	public Parent createUpdater(FXManifest manifest) {
+	public Parent createUpdater() {
 		progressBar = new ProgressBar();
-		progressBar.setStyle(manifest.progressBarStyle);
+		progressBar.setStyle("-fx-pref-width: 200;");
 
-		Label label = new Label(manifest.updateText);
-		label.setStyle(manifest.updateLabelStyle);
+		Label label = new Label("Updating...");
+		label.setStyle("-fx-font-weight: bold;");
 
 		VBox wrapper = new VBox(label, progressBar);
-		wrapper.setStyle(manifest.wrapperStyle);
+		wrapper.setStyle("-fx-spacing: 10; -fx-padding: 25;");
 
 		return wrapper;
 	}

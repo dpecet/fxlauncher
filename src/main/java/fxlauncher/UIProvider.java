@@ -29,7 +29,7 @@ public interface UIProvider {
 
 	/**
 	 * Initialization method called before {@link #createLoader()}
-	 * and {@link #createUpdater(FXManifest)}. This is a good place to add
+	 * and {@link #createUpdater()}. This is a good place to add
 	 * stylesheets and perform other configuration.
 	 *
 	 * @param stage The stage that will be used to contain the loader and updater.
@@ -54,7 +54,7 @@ public interface UIProvider {
 	 * @see #updateProgress(double)
 	 * @return The updater Node
 	 */
-	Parent createUpdater(FXManifest manifest);
+	Parent createUpdater();
 
 	/**
 	 * Called when the update/download progress is changing. The progress is a value between
